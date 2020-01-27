@@ -9,6 +9,9 @@ scrape_configs:
       - targets: ['pushgateway:9091']
         labels:
           cluster: 'tidb-cluster'
+      - targets: ['marsishandsome.local:8234']
+        labels:
+          cluster: 'tiflash-cluster'
 rule_files:
   - 'pd.rules.yml'
   - 'tikv.rules.yml'
